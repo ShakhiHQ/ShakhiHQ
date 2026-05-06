@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:italic,wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Libre Baskerville", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e6ece6;
+  --color-sage-200: #ced9ce;
+  --color-sage-300: #a7baab;
+  --color-sage-400: #7d9683;
+  --color-sage-500: #5d7864;
+  --color-sage-600: #4a5f4f;
+  --color-sage-700: #3d4d41;
+  --color-sage-800: #343f36;
+  --color-sage-900: #2d362e;
+}
+
+@layer base {
+  body {
+    @apply bg-sage-50 text-sage-900 antialiased;
+  }
+}
+
+.organic-card {
+  @apply bg-white rounded-3xl p-6 shadow-sm border border-sage-100;
+}
+
+.technical-row {
+  @apply grid grid-cols-6 items-center px-4 py-3 border-b border-sage-100 hover:bg-sage-50 transition-colors;
+}
+
+.label-micro {
+  @apply text-[10px] uppercase tracking-wider font-semibold text-sage-400;
+}
